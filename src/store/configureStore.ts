@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from './rootReducer'
+// store.js
 
-export const store = configureStore({
-  reducer: rootReducer,
+import { configureStore } from '@reduxjs/toolkit'
+import apiReducer from '../features/apiSlice'
+
+const store = configureStore({
+  reducer: {
+    apiData: apiReducer,
+  },
 })
 
 export default store
